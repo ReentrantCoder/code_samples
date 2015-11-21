@@ -7,4 +7,4 @@ bayes.py is a Naive Bayesian classifier of American Census data for my data mini
 
 des.py is my differential crypt attack of 3-round DES from my cryptography course
 
-Behm_Quiz4.mp4 is a 3 minute video that explains my code that utilizes Spring and Hibernate from my OO course
+Behm_Quiz4.mp4 is a 3 minute video that explains my code that utilizes MySQL, Spring, and Hibernate from my OO course
