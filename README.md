@@ -7,9 +7,9 @@ bayes.py is a Naive Bayesian classifier of American Census data for my data mini
 
 des.py is my differential crypt attack of 3-round DES from my cryptography course
 
-Behm_Quiz4.mp4 is a 3 minute video that explains my code that utilizes Java, MySQL, Spring, and Hibernate from my OO course
+Hibernate_Spring.mp4 is a 3 minute video that explains my code that utilizes Java, MySQL, Spring, and Hibernate from my OO course
 
-BFSdiameter directory contains a Java implementation to find the diameter of a graph using BFS
+BFSdiameter_Java directory contains a Java implementation to find the diameter of a graph using BFS
 
 
 
