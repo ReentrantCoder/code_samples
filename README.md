@@ -11,6 +11,8 @@ Hibernate_Spring.mp4 is a 3 minute video that explains my code that utilizes Jav
 
 BFSdiameter_Java directory contains a Java implementation to find the diameter of a graph using BFS
 
+cholesky.java is a decomposition of a Hermitian, positive-definite matrix into the product of a lower triangular matrix and its conjugate transpose for my numerical computations course.
+
 
 
 Please feel free to look at my other repositories.
