@@ -1,4 +1,4 @@
-# code_samples
+# school_code_samples
 A collection of short code samples not covered in my other repos for job interviews
 
 bayes.py is a Naive Bayesian classifier of American Census data for my data mining course
