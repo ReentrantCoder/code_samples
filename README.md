@@ -1,8 +1,6 @@
 # code_samples
 A collection of short code samples not covered in my other repos for job interviews
 
-sccfinder.py is strongly clustered component finder for a graph from my algorithms course
-
 bayes.py is a Naive Bayesian classifier of American Census data for my data mining course
 
 des.py is my differential crypt attack of 3-round DES from my cryptography course
@@ -13,6 +11,9 @@ BFSdiameter_Java directory contains a Java implementation to find the diameter o
 
 cholesky.java is a decomposition of a Hermitian, positive-definite matrix into the product of a lower triangular matrix and its conjugate transpose for my numerical computations course.
 
+kriging_R is a gaussian process regression of Wifi signal for my Computer Performance class
+
+omnet++_C++ is a network simulation for my Computer Performance class.
 
 
 Please feel free to look at my other repositories.
