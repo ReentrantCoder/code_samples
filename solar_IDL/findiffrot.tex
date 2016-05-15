@@ -1,0 +1,373 @@
+\documentclass[preprint2]{aastex}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand{\myemail}{tylerwbehm@gmail.com}
+
+\slugcomment{Want to appear in \apj}
+
+\shorttitle{Solar DR in Calcium II K}
+\shortauthors{Behm and Keil}
+
+\begin{document}
+
+\title{Solar Differential Rotation in Disk-Integrated Calcium II K Line Spectra Supported with Spectroheliogram Analysis}
+
+\author{Tyler W. Behm and Stephen L. Keil}
+\affil{National Solar Observatory, Sunspot, NM 88349}
+
+\email{tylerwbehm@gmail.com}
+
+\begin{abstract}
+Recent papers report on measuring differential rotation (DR) in the Sun as a star. Disk-integrated light averages over many latitudes and only works for measuring DR if the features both exist at a dominate latitude that changes with the solar cycle and persist long enough to affect the measured rotation rate. Scargle, Keil, and Worden (2013, ApJ in press, arXiv:1303.6303) used the Sacramento Peak K-line series to find fairly strong evidence that the DR is visible in cycle 22, but it is much harder to see in cycles 21 and 23. \cite{bert12} clearly see an increase in the rotation rate at the beginning of the current cycle. To supplement previous work, we studied the full-disk solar DR measurements in both the Sacramento Peak disk-integrated, Ca II K spectral time series (1977-2012) and  Ca II K spectroheliogram time series (1977-2002) observed at the Evans Solar Facility. The former data set is the same as used by Scargle et al. We use singular value decomposition to fill in missing days. We found a clear DR signal for cycles 21 and 22 and a partial signature for cycle 23. We tested this result by measuring DR using correlation tracking on the Ca II K spectroheliograms. We also explored the image features that lead to changes in the disk-integrated spectrum's signal-to-noise.
+\end{abstract}
+
+\keywords{methods: data analysis -- stars: rotation -- Sun: chromosphere -- Sun: rotation} 
+
+\section{Introduction}
+
+\cite{wils78} monitored the Ca II H and K line emission of 91 main sequence stars with the goal of measuring stellar rotation rates and variability. Others have used his measurements in efforts to measure stellar DR with uncertain results \citep{bali85}. The correlation of Ca K emission with active regions, which on the Sun are seen to migrate from higher to lower latitude over the course of a solar cycle, suggests that rotation rates seen in disk-integrated Ca  II emissions may show DR on stars as active regions migrate in latitude.
+
+For the Sun, correlation tracking of sunspots was the first technique used to find solar DR \citep{newt51}. DR was alo detected in Doppler shift measurement \citep{howa79}.
+
+Evidence of DR has also been uncovered in historical archives. \cite{arlt12} finds solar DR measurements in 18th century observations by correlation tracking the sunspot drawings of Johann Staudacher. This established the existence of DR in solar cycles 1 through 4 (1749-1799).
+
+By studying disk-integrated sunlight, we provide support for a range of stellar astrophyical research interests. Our techniques and acquired knowledge can be extend to any star that has active latitudes. These would be F through M type low mass stars with an outer convective envelope. Stellar DR studies are important because stellar magnetic activity, angular momentum, and torsional oscillations can be deduced from such measurements \citep{spru01}.
+
+Hints of solar DR in disk-integrated (the Sun viewed as a star) calcium K-line emissions were seen as a steep jump in rotational period at the beginning of solar cycle 22 \citep{dona95} and via the simultaneous existence of two rotational periods \citep{hasl02}. However, neither study measured the full solar DR cycle or provided supporting analysis. In this paper, we report on results of our attempt to measure solar DR over 3 solar cycles.
+
+This paper has three parts detailing solar DR in three different time series, sunspot data, disk-integrated data, and spectroheliogram data. Each part has its own analysis and results grouped together. In section 2, we do some preliminary analysis on sunspot data to determine what an ideal disk-integrated DR signature should look like. Section 3 describes our observations and techniques for processing the disk-integrated data. In section 4, we describe our results for DR seen in the Ca II disk-integrated data. In section 5, we verify the section 4 results by finding differetial rotation in spectroheliograms as well. We summarize and discuss our work in section 6.
+
+\section{Ideal Solar Differential Rotation Signature}
+
+An issue is that the Ca II data is somewhat noisy. Sources of noise in the DR signal measured using the Ca II data come from several sources. The Ca II parameters themselves are noisy because of (1) shut noise in the photomultiplier, (2) imperfect correction of varying atmospheric transmission, and (3) both the diffuse nature of the Ca II active regions and the background (basil) Ca II emission \citep{keil84}.
+
+Sunspots clearly show a strong DR signal. Thus we use them to see what an ideal period versus time DR curve would look like. Active regions rotate with increasing frequency across the face of the Sun as they converge from greater absolute latitudes to the equator during the course of a solar cycle.
+
+\begin{figure}[H]
+\plotone{butterfly2.eps}
+\caption{Butterfly diagram of sunspot area spanning the timeframe of the Calcium K monitoring programing.
+{\it www.solarscience.msfc.gov}.\label{fig1}}
+\end{figure}
+
+Using the sunspot area data of Fig. 1, we calculated a high signal-to-noise DR signature so that we would know what to look for in our noisier disk-integrated Ca II K-line data. We calculated the latitude of a sunspot representing both the north and south hemispheres by peforming an area weighted average of the absolute valued latitude in the butterfly diagram data from Fig. 1. Using the plasma rotation rate equation of \cite{snod83} shown in Eq. 1,
+\begin{equation}
+\frac{\Omega_p}{2\pi}=452-49\sin ^2\theta - 84\sin ^4\theta \text{  nHz}
+\end{equation}
+we converted the average sunspot latitude to a sidereal rotational period time series (Fig. 2) that serves as a guideline for an ideal DR signature. In Eq. 1, $\Omega_p$ is the sidereal rotation frequency and $\theta$ is the latitude angle in degrees. The sidereal rotation period is easily found by inverting the corresponding frequency. 
+
+We saw that the ideal DR signature has a sharp jump to longer periods at the beginning of a solar cycle and then a slow fall to shorter periods as the cycle progresses. This corresponds to the emergence of active regions at high latitudes during the maximum of a solar cycle and then the slow progression of the active regions towards the equator throughout the cycle. This is the signature that we should be looking for in our disk-integrated data.
+
+\begin{figure}[H]
+\plotone{modeldiffrot.eps}
+\caption{(Top) Mean latitude obtained by averaging the butterfly diagram data in Fig. 1 over latitudes. (Bottom) Rotation period corresponding to mean latitude.}
+\end{figure}
+
+\section{Observations}
+
+\subsection{Calcium K}
+
+We used the Ca K emission index which is defined as the equivalent width of a 1$\AA$ band centered on the K-line core as shown in Fig. 3. The Ca K emission index positively correlates with solar cycle modulation and is an exact analog of DR measurements used by stellar astronomers. 
+
+The Calcium K Monitoring Program at Sacramento Peak has taken data for 10\% of days from 1976-1983 \citep{keil84} and for 45\% from 1984-present (Fig. 4). Because of the gaps in the data, analyzing them for periodicites is difficult. Because the K-line correlates reasonably well with several other parameters that measure solar activity, we decided to use proxies to fill the gaps before searching for periodicities.
+
+\begin{figure}[H]
+\plotone{cak.eps}
+\caption{Quintessential Ca K line profile. The Ca K emission index is a 1$\AA$ bandpass centerd at the K3 core normalized to the continuum via the intesity in the shaded area.\citep{dona95}}
+\end{figure}
+
+\begin{figure}[H]
+\plotone{missdays.eps}
+\caption{Before 1984, the average gap in the Ca K observations was 10.3 days. Between 1984-1998, the average gap was 2.3 days. After 1998, average gap was 3.8 days. From this figure, it's apparent that the best sampling rates occurated between 1985-1998. These gaps necessitated interpolation with Ca K proxies.}
+\end{figure}
+
+\subsection{Ca K Proxies}
+
+We tested two methods for interpolating the missing data, linear regression and singular value decomposition (SVD).
+
+For SVD interpolation to work properly, it is important for our proxies to be highly linearly correlated with our Ca K emission index. Thus, we chose proxies that have previously been shown to be correlated with Ca K emissions: sunspot number \citep{leig59}, decimetric index \citep{whit81}, and Mg II index \citep{heat86}. The correlation strength of the Ca K emission index with our proxies is shown in Fig. 5.
+
+For our Ca K emission index proxies, we used sunspot number, decimetric index (a measure of 10.7cm flux), and magnesium II index (a measure of 2800$\AA$ flux) data acquired from the National Geographic Data Center (http://www.ngdc.noaa.gov/).
+
+
+\begin{figure}[H]
+\plotone{proxcorr.eps}
+\caption{From left to right, correlation of the Ca II emission endex to the sunspot number, decimetric index, and magnesium index, respectively.}
+\end{figure}
+
+\section{Singular Value Decomposition}
+
+We worked with a rectangular matrix $A$ that has the Ca K and proxy time series as rows. Thus, picking a column in $A$ would give a particular time and picking a row would give Ca K or one of the three proxies.
+
+At its simplest, SVD is the generalization of eigenvalue decomposition from square matrices to rectangular matrices. In both cases, we could decompose the original matrix $A$ into a square matrix with diagonals that are eigenvalues ($D$) and matrices whose columns are eigenvectors ($P, U, V$). 
+
+\begin{equation} \label{eq:1}
+A=PDP^{-1}
+\end{equation}
+\begin{center}
+for $A \in \mathbb{R}^{n \times n}$
+\end{center}
+
+\begin{equation} \label{eq:2}
+D=\left[\begin{array}{ccc}
+\lambda_1 & 0 & \cdots \\
+0 & \ddots & 0 \\
+\vdots & 0 & \lambda_n
+\end{array} \right]
+\end{equation}
+\begin{center}
+where $\lambda$ are eigenvalues of A
+\end{center}
+
+\begin{equation} \label{eq:3}
+P=\left[\begin{array}{ccc}
+\vec{e_1} & \cdots & \vec{e_n}
+\end{array} \right]
+\end{equation}
+\begin{center}
+where $\vec{e}$ are eigenvectors of $A$ 
+\end{center}
+
+\begin{equation} \label{eq:4}
+A=UDV^{*}
+\end{equation}
+\begin{center}
+for $A \in \mathbb{R}^{m \times n}$
+\end{center}
+
+\begin{equation} \label{eq:5}
+D_{ij}=\begin{cases}
+	\lambda_i & \text{if }i=j\leq r \\
+	0 & \text{otherwise}
+	\end{cases}
+\end{equation}
+\begin{center}
+where $\lambda$ are eigenvalues of $A^*A$ and $AA^*$
+\end{center}
+
+\begin{equation} \label{eq:6}
+V=\left[\begin{array}{ccccc}
+\vec{x_1} & \cdots & \vec{x_r} & 0 & \cdots
+\end{array} \right]
+\end{equation}
+\begin{center}
+where $\vec{x}$ are eigenvectors of $A^*A$
+\end{center}
+
+\begin{equation} \label{eq:7}
+U=\left[\begin{array}{ccccc}
+\vec{y_1} & \cdots & \vec{y_r} & 0 & \cdots
+\end{array} \right]
+\end{equation}
+\begin{center}
+where $\vec{y}$ are eigenvectors of $AA^*$
+\end{center}
+
+Notice how Eq. 2 is analogous to Eq. 5, Eq. 3 to Eq. 6, and Eq. 4 to Eqs. 7 \& 8. For further explanation, we refer the reader to the explanation provided by \cite{lanc85}.
+
+SVD has a variety of applications other than interpolation. \cite{dals93} solved the helioseismic inverse problem with SVD. \cite{raci11} performed a linear least-squares fit of EMF in solar convection simulations with SVD. A variety of scientific fields have applied SVD for interpolating. \cite{cann12} SVD interpolated compact binary gravitation waveforms. \cite{troy01} SVD interpolated DNA microarray gene expression data. 
+
+But only one example of SVD interpolation been applied in the field of solar physics \citep{wit11}. Dudok de Wit wrote his code in MATLAB and used it to intepolate SoHO Solar EUV Monitor data.
+
+Furthermore, as of the writing of this paper, an IDL SVD interpolating procedure was not widely available. We rewrote Dudok de Wit's MATLAB code into an IDL procedure which is available from the author upon request.
+
+\section{Disk-Integrated Differential Rotation}
+
+Before searching the data for DR, we filled in the missing data. The two different techniques that were used to interpolate the missing points were regression and SVD. After filling in the data, we used both power spectra and autocorrelation techniques to compute periodicities in the data as a function of time.
+
+\subsection{Interpolation}
+
+Fig. 6 \& 7 compare results obtained by replacing the missing data using linear regression and SVD. The SVD method did a better job of retaining the original data points as can be seen in Fig. 7. The regression analysis used a linear fit to the K-line using the decimetric flux, sunspot number, and magnesium data as proxies. It stoped in 2007 because the magnesium index was not measured after that. The SVD also used all three proxies, but provided results out to the last measured date of the longest proxy (in this case, the decimetric flux).
+
+\begin{figure}[H]
+\plotone{globalinterp.eps}
+\caption{Global performance of both interpolation schemes. (Top) Regression interpolated Ca K emission index versus time. The time series is truncated compared to the SVD case. (Bottom) SVD interpolated Ca K emission index versus time.}
+\end{figure}
+
+\begin{figure}[H]
+\plotone{localinterp.eps}
+\caption{Local perfomance of both interpolation schemes. (Top) Regression interpolated Ca K emission index versus time. (Bottom) SVD interpolated Ca K emission index versus time.}
+\end{figure}
+
+\subsection{Finding The Dominant Rotation Periods}
+
+To search for a rotation rate as a function of time, we used a sliding window over the data set. The length of the window was varied between 90 days and the whole data set to see how it influenced the results. The distance the window was slid between computations determined how much over lapping data was used in each determination of the period. We used three methods to find a representative period within each position of the window along the data set. These included computing the power spectra of the data in the window and then locating the peak power in the frequency range corresponding to periods between 22 and 32 days. We looked for the weighted mean period in the 22-32 day window of the power spectra by using the power as weighting. We also computed an autocorrelation function for each position and looked for the peak between 22 and 32 days. Fig. 8 shows sample power spectra and auto correlation functions.
+
+\begin{figure}[H]
+\plotone{samplespectra.eps}
+\caption{Power spectra and autocorrelation function within our window of interest (22-32 days) on May 21, 1990.}
+\end{figure}
+
+Fig. 9 shows results from the data interpolated using regression. From the figure, we could see that all three methods captured the 1987 increase in the period at the beginning of cycle 22 well with the weighted mean method yielding the strongest signature. Furthermore, the 1998 signature was captured well by the peak autocorrelation method and was somewhat captured by the other two methods.
+
+\begin{figure}[H]
+\plotone{regressanalysis720days.eps}
+\caption{Plots of synodic rotation period versus time for regression interpolated data using the three different methods for finding the rotation period. (Top) Peak in power spectra. (Middle) Peak in autocorrelation. (Bottom) Weighted mean using the power spectra for weights. All use a 720 day window slid 10 days between calculation.}
+\end{figure}
+
+Fig. 10 shows that all three methods captured the 1987 signature well using the SVD interpolated data. The weighted mean method giving the clearest signal. The peak autocorrelation methods shows a weak DR signal in 1998. Furthermore, the beginning of the 2011 signature could be seen with all three methods.
+
+\begin{figure}[H]
+\plotone{svdcanalysis720days.eps}
+\caption{Plots of synodic rotation period versus time for SVD interpolated data using the three different methods for finding the rotation period. (Top) Peak in power spectra. (Middle) Peak in autocorrelation. (Bottom) Weighted mean using the power spectra for weights. All use a 720 day window slid 10 days between calculation.}
+\end{figure}
+
+\begin{figure}[H]
+\plotone{auto.eps}
+\caption{The autocorrelation function is shown as a function of period and time. The values near zero shift has been suppressed to bring out the peak between 22 and 32 days. The far left shows a plot of the intepolated K-line emission index. The 1987 increase in period is easily seen.}
+\end{figure}
+
+In Fig. 11, we plotted the autocorrelation function as a function of period and time along with the SVD interpolated emission index. Cycles 21 and 22 showed a clear increase in the period of rotation as solar max was approached followed by a decline in period as solar minimum is approached. 
+
+To examine the effect of our selected proxies on the interpolated emission index and thus then their influence on the DR signatures, we systematically removed one of the proxies from our SVD analysis and examined how the weighted mean period method performed in finding the signatures.
+
+\begin{figure}[H]
+\plotone{rmproxy.eps}
+\caption{Weighted mean power spectra residuals of all proxy SVD intepolation minus the interpolation with the labeled proxy leftout. }
+\end{figure}
+
+From Fig. 12, we noted that removing  sunspot number does not change the computed rotation period. The decimetric data contributes to make the 1985 signature look like the ideal signature but lessens the 1997 signature. On the other hand, the Mg II data lessens the 1985 signature and contributes to the 1997 signature. Even though each of these proxies are positively correlated to the Ca K emmissions, they sometimes contribute or deter the signature because at that instant the correlation may be above or below the correlation lines in Fig. 5. The physical cause of this could be from a plethora of reasons including different Mg II concentrations in the north and south solar hemispheres which would produce a contribution then determent on alternating cycles. Removing either the decimeteric or Mg II data could shift the computed periods by about $\pm 0.75$ days. This should be compared to the computed period which varies by about 4 days.
+
+\section{Supporting Evidence in Spectroheliograms}
+
+There are several factors that could influence our ability to mearuse DR in the integrated Ca II K-line emissions. Using proxies to fill in the missing data is imperfect Rotation rates in the proxies are not necessarily identical which could introduce error. Sunspots, Mg II emission regions, and decimetric emission regions appear and disappear differently from the K-line emission, which can shift the apparent rotation rate. \cite{bert12} have more regular sampling of the emission index and find a clear increase in the period of rotation at the beginning of the current cycle. In addition, both the evolution of Ca II active regions and their diffuse nature in latitude can affect the results. To test whether or not we should see a clear DR signal in the interpolated emission index, we have computed rotation rates by correlation tracking the Sacremento Peak Ca II spectroheliograms.
+
+%%Finding solar DR in disk-integrated measurements is suprisingly difficult. This is because of unconcentrated solar active latitudes, the evoution of active regions \citep{dona95}, effects of missing days, and imperfect interpolation. But with their uniform sampling \cite{bert12} see a very clear signal in the current cycle.
+
+%%Our paper provides supplemental analysis from a separate yet similar Sacramento Peak spechroheliogram data set. We definitively established the validity of the DR signal in disk-integrated chromospheric calcium II K line spectra by finding the same signal through correlation tracking of the spectroheliograms.
+
+\subsection{Spectroheliograph Observations}
+The spectroheliogram observations were taken with the Evans Solar Facility spectroheliograph from 1965-2002. We chose to analyize the Ca K spectroheliograms centered on $\lambda = 3933.67 \AA$ with bandpass of $0.514 \AA$ from 1978-2002 and compared it with the first two solar cycles of our Ca K index analysis. 
+
+The spectroheliogram emulsion films were digitized with a 600dpi, 16-bit commercial flatbed scanner \citep{tlat09}. The scans still required significant processing. We reformed the disk images into a circle with radius of 500 elements. This compensated for varying slit scanning speeds and for varying angular size of the Sun throught the year. The orientation of the digitized images was not consistent throughout. Thus we reoriented the scans to produce a smooth rotation sequence after taking out the P-angle. About 30$%$ of the scans had to be manually reoriented. A processed image is shown in Fig. 12.
+
+Because the full-disk spectroheliograms are satellite projection images of the sun, pixels near the limb will be underrepresented in terms of area. We removed this foreshortening by remapping the image to a cylindrical equal-area projection as shown in Fig. 13. Furthermore, our remapping removed the projection effects of the solar B-angle (tilt angle along line of sight).
+
+\begin{figure}[H]
+\plotone{birthdayortho.eps}
+\caption{A negative of the original spectroheliogram after circularization and orientation for P-angle (tilt angle perpendicular to line of sight) overlayed with Stonyhurst disk of 10 degree steps. }
+\end{figure}
+
+\begin{figure}[H]
+\plotone{birthdayflat.eps}
+\caption{The cylindrically projected spectroheliogram from within bounds of $\pm$ 70 degrees latitude and longitude.}
+\end{figure}
+
+\subsection{Correlation to Disk-Integrated Spectra}
+
+To properly compare our disk-integrated and spectroheliogram analysis, we first established the correlation strength between the two data sets. Both data sets were taken at the Evans Solar Facility, so we expected short-term decorrelating effects from weather, location, etc. to be minimized. 
+
+Neither the disk-integrated data nor the satellite projection spectroheliograms compensated for foreshortening, thus we tested the correlation between these two data sets. We summed up all the pixel values in the spectroheliograms scans to produce a disk-integrated value. Fig. 14 shows the scatter before the totaled pixel value and the Ca K emission index. We found a correlation of R=0.56. Noting the Ca II emission index is measured on a $1\AA$ band at disk center and the spectroheliogram bandpass is $0.5\AA$, the correlation was sufficient to produce reasonable confidence that the two data sets would produce similar rotation rates. The spectroheliograms were normalized to queit sun regions, but the correlation could have been further improved by proper normalization of the spectroheliograms.
+
+\begin{figure}[H]
+\plotone{diskcorr.eps}
+\caption{Correlation between disk-integrated calcium K line spectra emmision index (X-axis) and total pixel value of spectroheliograms (Y-axis) for matching dates. }
+\end{figure}
+
+\subsection{Latitude Dominance Analysis}
+
+To determine the latitude concentration of the active regions, we computed a Ca II butterfly diagram by summing pixels on each spectroheliogram over longitude in 2.3 degree latitude bands. Fig. 16 shows the resulting intensity butterfly diagram.
+
+\begin{figure}[H]
+\plotone{mybutter.eps}
+\caption{Butterfly diagram found by totaling cylindrically projected spectroheliogram pixel values with 2.3 degree latitude bands. }
+\end{figure}
+
+\cite{hath10} showed that sunspot distribution increase in disbursion around solar maximum. We found that during the rising phase of cycle 22 the disbursion of Ca K irradiance become more compact (bottom of Fig. 16). This would explain why there is greater signal-to-noise during that phase of cycle 22 in disk-integrated measurements.
+
+When compared to the mean absolute latitude calculated from Worden's sunspot data (Fig. 2), the mean absolute latitude calucated from the Evan's spectroheliogram data (top of Fig. 16) shows a systematic offset of about 27 degrees in latitude. We speculated that this is because the spectroheliogram data includes the quiet sun regions where as the sunspot data does not. Because quiet sun regions exist at larger latitude, they shifted the mean absolute latitude higher.
+
+\begin{figure}[H]
+\plotone{rmsspread.eps}
+\caption{(Top) Weighted mean, absolute latitude of the satellite projected spectroheliograms. The shift in latitude over a cycle of the Ca II emission indicated that we should detect a DR signature. (Bottom) Root-mean-squared spread from the mean latitude. }
+\end{figure}
+
+\subsection{Differential Rotation in Spectroheliograms}
+
+We used correlation tracking to find the period and consequently extract the differenental rotation signal from the projected spectroheliograms (Fig. 18). Two consecutive cylindrically projected spectroheliograms were translated until the 2D correlation maximized. The period was then calculated from the latitudinal translation at maximum correlation and from the time between the consecutive images. A cosine bell was applied to reduce ringing from uneven ends. Also, a low-pass filter was applied to the period plot to remove signals and noise of frequencies higher than .01 Hz.The low-pass filter was a tapered boxcar instead of a normal boxcar to prevent ringing.
+
+\begin{figure}[H]
+\plotone{per_track.eps}
+\caption{Period calculated from difference imaging of spectroheliograms. }
+\end{figure}
+
+\section{Conclusion}
+
+\subsection{Comparison of Results}
+
+The three DR signals (Figs. 2, 9, & 17) that we calculated show both similarities and differences. All three showed that solar cycle 22 peaked around 1987 and had the greatest range of periods. We speculate that this is because the K-line emission was better sampled and more concentrated in latitude for solar cycle 22 (Fig. 16 bottom). Both the disk-integrated and spectroheliograms do exhibit DR to some degree particularly on cycle 22. Because these data sets were taken at the same location and wavelength, there results are mutually supporting.
+
+On the otherhand, the ideal, disk-integrated, and spectroheliogram DR signals had period ranges of 1 day, 2 days, and .5 days respectively. Unfortunately, the amplitude of the signals is artificially suppressed by the amount of smoothing necessary to recover the signal. Furthermore, the period falls off much quicker in the disk-intergrated and spectroheliogram DR signal than in the ideal DR signal. This could be because of the decreased presence of active regions during solar minimum which would cause the period to be dominated by the average rotation rate instead of the active region rotation rate.
+
+\subsection{Summary}
+
+We developed code implementing SVD in IDL for interpolating missing data. We used it to interpolate time series of the Ca II K-line emission data and to find that we could see the full solar DR signature in solar cycles 21 and 22 and partial signature in cycle 23.
+
+Furthermore, we verified the disk-integrated results by finding matching results in the spectroheliogram data.
+
+It is now possible to compare our more sophisticated techniques and results to stellar DR as requested by \cite{bali85}.
+
+\subsection{Future Work}
+
+A .5$\AA$ bandpass spanning the distance between the K2 peaks provides the Ca K index with 50\% greater amplitude than that of the traditional 1$\AA$ bandpass centered at the line core \citep{livi07}. This would increase the correlation strength with the NSO spectroheliograms \citep{word98}.
+
+Decomposing time series by centering a bandpass filter around each periodicity of interest and then performing the SVD separately better preserves the individual signals \citep{wit11}. Combining signals after interpolation would produce an overall better signal. We could apply this to get a better interpolation from our Ca K and proxy time series.
+
+Active regions that form and disappear on times scale shorter than the rotation period shift the power spectra and autocorrelation towards lower periods. We could attempt to remove this effect from our data \citep{stim82}.
+
+There are better techniques available for finding the domaninant period than looking for peaks in the power spectra or autocorrelation. \cite{bert12} uses maximal entropy methods to find DR in ISS data with exceptional clarity even during times of low signal-to-noise such as solar maximum. We could apply this to find domaninant periods with much greater accuracy. 
+
+In the coming years, the Ca K monitoring program will move to the SOLIS ISS. Thus, it would sense to begin using the ISS's solar data Ca K, He I, CN, H $\alpha$, etc \citep{bert11}.
+
+\textbf{Acknowledgments}
+
+We are grateful to Thierry Dudok de Wit who shared his MATLAB SVD intepolation code, to all of those who took data as part of the Ca K monitoring program, and to everyone who reviewed this paper. This research was support by NSF award number 0852096.
+
+The data analyzed in this presentation can be found at the National Solar Observatory web site:
+
+\noindent
+\url{http://nsosp.nso.edu/cak_mon/}
+
+\noindent
+\url{ftp://ftp.nso.edu/idl/cak.parameters} 
+ 
+\noindent
+\url{ftp://diglib.nso.edu/Evans_spectroheliograms/} 
+
+{\it Facilities:} \facility{Evans (Coelostat, Littrow Spectrograph, Spectroheliograph)}
+
+\begin{thebibliography}{}\setlength{\itemsep}{-2mm}
+\footnotesize
+\bibitem[Arlt \& Fr\"{o}hlich(2012)]{arlt12} Arlt, R. \& Fr\"{o}hlich, H.-E., 2012, \aap, 543, A7
+\bibitem[Baliunas et al.(1985)]{bali85} Baliunas, S. L. et al., 1985, \apj, 294, 310
+\bibitem[Bertello et al.(2011)]{bert11} Bertello, L., Pevtsov, A. A., Harvey, J. W., \& Toussaint, R. M., 2011, \solphys , 272, 229
+\bibitem[Bertello et al.(2012)]{bert12} Bertello, L., Pevtsov, A. A., \& Pietarila, A., 2012, \apj, 761, 11
+\bibitem[Cannon et al.(2012)]{cann12} Cannon, K., Hanna, C., \& Keppel, D., 2012, \prd, 85, 081504
+\bibitem[Christensen-Dalsgaard et al.(1993)]{dals93} Christensen-Dalsgaard, J., Hansen, P. C., \& Thompson, M. J., 1993, \mnras, 264, 541
+\bibitem[Donahue \& Keil(1995)]{dona95} Donahue, R. A. \& Keil, S. L., 1995, \solphys, 159, 53
+\bibitem[Dudok de Wit(2011)]{wit11} Dudok de Wit, T.,  2011, \aap, 533, A29
+\bibitem[Hathaway(2010)]{hath10} Hathaway, D., 2010, Living Rev. Solar Phys., 7, http://www.livingreviews.org/lrsp-2010-1
+\bibitem[Hasler et al.(2002)]{hasl02} Hasler, K.-H., R\"{u}diger, G., \& Staude, J., 2002, Astron. Nachr., 323, 123
+\bibitem[Heath \& Schlesinger(1986)]{heat86} Heath, D. F. \& Schlesinger, B. M., 1986, \jgr, 91, 8672
+\bibitem[Howard et al.(1979)]{howa79} Howard, R., Boyden, J. E., Labonte, \&  B. J., 1979, \solphys, 66, 167
+\bibitem[Keil \& Worden(1984)]{keil84} Keil, S. L. \& Worden, S. P., 1984, \apj, 276, 766
+\bibitem[Lancanster \& Tismenetsky(1985)]{lanc85} Lancaster, P. \& Tismenetsky, M., 1985, The Theory of Matrices with Application (2nd ed.)
+\bibitem[Leighton(1959)]{leig59} Leighton, R. B., 1959, \apj, 130, 366 
+\bibitem[Livingston et al.(2007)]{livi07} Livinston, W., Wallace, L., White, O. R., \& Giampapa, M. S., 2007, \apj, 657, 1137
+\bibitem[Newton \& Nunn(1951)]{newt51} Newton, H. W. \& Nunn, M. L., 1951, \mnras, 111, 413
+\bibitem[Racine et al.(2011)]{raci11} Racine, E., Charbonneau, P., Ghizaru, M., Bouchat, A., \& Smolarkiewicz, P. K., 2011, \apj, 735, 22
+\bibitem[Snodgrass(1983)]{snod83} Snodgrass, H. B., 1983, \apj, 270, 288
+\bibitem[Spruit(2001)]{spru01} Spruit, H. C., 2002, \aap, 381, 923
+\bibitem[Stimets \& Londono(1982)]{stim82} Stimets, R. W. \& Londono, C., 1982, \solphys, 76, 167
+\bibitem[Tlatov et al.(2009)]{tlat09} Tlatov, A., Pevtsov, A., \& Singh, J., 2009, \solphys, 255, 239
+\bibitem[Troyanskaya et al.(2001)]{troy01} Toryanskaya, O., et al., 2001, Bioinformatics, 17, 520
+\bibitem[White \& Livingston(1981)]{whit81} White, O. R. \& Livingston, W. C., 1981, \apj, 249, 798
+\bibitem[Wilson(1978)]{wils78} Wilson, O.C., 1978, \apj, 226, 379
+\bibitem[Woods et al.(2000)]{wood00} Woods, T. N., Tobiska, W. K., Rottaman, G. J., \& Worden, J. R., 2000, \jgr, 105, 27195
+\bibitem[Worden et al.(1998)]{word98} Worden, J. R., White, O. R., \& Woods, T. N., 1998, \apj, 496, 998
+\normalsize
+\end{thebibliography}
+
+\end{document}
