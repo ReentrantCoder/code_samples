@@ -15,6 +15,9 @@ kriging_R is a gaussian process regression of Wifi signal for my Computer Perfor
 
 omnet++_C++ is a network simulation for my Computer Performance class.
 
+solar_IDL is my singular value decomposition in IDL with Latex writeup.
+
+reflect.f90 is a FORTRAN simulation of the reflection of photons.
 
 Please feel free to look at my other repositories.
  
