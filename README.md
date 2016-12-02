@@ -1,7 +1,7 @@
 # school_code_samples
 A collection of short code samples not covered in my other repos for job interviews
 
-groovy_SQL is a small demo of some of the skills that I used at Pitney Bowes.
+[groovy_SQL](https://github.com/ReentrantCoder/school_code_samples/blob/master/groovy_SQL/fastestPokemon.groovy) is a small demo of some of the skills that I used at Pitney Bowes.
 
 hmmpos.py is my Hidden Markov model part-of-speech tagger for my natural lanugage processing course.
 
