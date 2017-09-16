@@ -8,9 +8,6 @@ public class diameter {
 		Node[] node = new Node[n];
 		for (int i = 0; i < n; ++i){
 			node[i] = new Node();
-			/*node[i].color = 0;
-			node[i].dist = -1;
-			node[i].pred = -1;*/
 		}
 		node[s].color = 1;
 		node[s].dist = 0;
