@@ -1,4 +1,4 @@
-# school_code_samples
+# code_samples
 A collection of short code samples not covered in my other repos for job interviews
 
 [xkcd_PHP](https://github.com/ReentrantCoder/school_code_samples/blob/master/xkcd_PHP) is web service search of XKCD comics.
