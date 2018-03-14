@@ -1,12 +1,15 @@
 
 public class Node {
-    //0=white, 1=gray, 2=black
-    public int color;
+    public static final String
+            WHITE = "white",
+            GRAY = "gray",
+            BLACK = "black";
+    public String color;
     public int distance;
     public int predecessor;
 
     public Node() {
-        this.color = 0;
+        this.color = WHITE;
         this.distance = -1;
         this.predecessor = -1;
     }

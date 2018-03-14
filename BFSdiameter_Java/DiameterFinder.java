@@ -10,7 +10,7 @@ public class DiameterFinder {
         for (int i = 0; i < numberOfNodes; ++i) {
             node[i] = new Node();
         }
-        node[start].color = 1;
+        node[start].color = Node.GRAY;
         node[start].distance = 0;
         Queue<Integer> queue = new LinkedList<Integer>();
         queue.add(start);
@@ -18,13 +18,13 @@ public class DiameterFinder {
             int u = queue.remove();
             for (int i = 0; i < adjacent.get(u).size(); ++i) {
                 int v = adjacent.get(u).get(i);
-                if (node[v].color == 0) {
-                    node[v].color = 1;
+                if (Node.WHITE.equals(node[v].color)) {
+                    node[v].color = Node.GRAY;
                     node[v].distance = node[u].distance + 1;
                     node[v].predecessor = u;
                     queue.add(v);
                 }
-                node[u].color = 2;
+                node[u].color = Node.BLACK;
             }
         }
 
@@ -42,7 +42,7 @@ public class DiameterFinder {
         for (int trial = 0; trial < 10; trial++) {
             //Parameters for Erdos-Renyi model
             int numberOfNodes = 3400;
-            float cParameter = 5.0;
+            double cParameter = 5.0;
             int diameter = 0;
             HashMap<Integer, LinkedList<Integer>> adjacent = new HashMap<Integer, LinkedList<Integer>>();
 
@@ -66,7 +66,7 @@ public class DiameterFinder {
             }
 
             //Print the diameter
-            System.out.println(diameter);
+            System.out.println("The diameter of trial " + trial + " is " + diameter);
         }
 
     }
