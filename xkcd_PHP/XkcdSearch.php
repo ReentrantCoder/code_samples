@@ -19,9 +19,6 @@ const MAX_COMIC_NUMBER = 1952;
 
 $cache = new DbCache();
 
-//TODO: Create a PHPUnit to assert that 'red' returns comic number 4 or whatever it is
-//TODO: Create a PHPUnit to assert that all comics below $cache->getMaxNumber() are persisted
-
 //Search the persisted comics first.
 $comic = $cache->fetchComicIfExists($searchWord);
 if ($comic != null) {
