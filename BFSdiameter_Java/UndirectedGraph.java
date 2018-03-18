@@ -13,6 +13,7 @@ public class UndirectedGraph {
     private int diameter;
     private HashMap<Integer, LinkedList<Integer>> adjacent;
 
+    //TODO: Add a trivial unit test to check if count(adjacent) = numberOfNodes
     public UndirectedGraph() {
         this.numberOfNodes = 3400;
         this.cParameter = 5.0;
@@ -20,15 +21,15 @@ public class UndirectedGraph {
         this.adjacent = new HashMap<Integer, LinkedList<Integer>>();
 
         //Build graph adjacency list
-        for (int i = 0; i < numberOfNodes; ++i) {
-            adjacent.put(i, new LinkedList<Integer>());
+        for (int i = 0; i < this.numberOfNodes; ++i) {
+            this.adjacent.put(i, new LinkedList<Integer>());
         }
-        for (int i = 0; i < numberOfNodes; ++i) {
-            for (int j = i + 1; j < numberOfNodes; ++j) {
-                if (Math.random() < cParameter / (numberOfNodes - 1)) {
+        for (int i = 0; i < this.numberOfNodes; ++i) {
+            for (int j = i + 1; j < this.numberOfNodes; ++j) {
+                if (Math.random() < this.cParameter / (this.numberOfNodes - 1)) {
                     //Add undirected edge
-                    adjacent.get(i).add(j);
-                    adjacent.get(j).add(i);
+                    this.adjacent.get(i).add(j);
+                    this.adjacent.get(j).add(i);
                 }
             }
         }
@@ -37,14 +38,12 @@ public class UndirectedGraph {
     /**
      *
      * @param start
-     * @param numberOfNodes
-     * @param adjacent
      * @return longestShortestDistance
      */
-    private static int searchBreadthFirst(int start, int numberOfNodes, HashMap<Integer, LinkedList<Integer>> adjacent) {
+    private int searchBreadthFirst(int start) {
 
-        Node[] node = new Node[numberOfNodes];
-        for (int i = 0; i < numberOfNodes; ++i) {
+        Node[] node = new Node[this.numberOfNodes];
+        for (int i = 0; i < this.numberOfNodes; ++i) {
             node[i] = new Node();
         }
         node[start].color = Node.GRAY;
@@ -53,8 +52,8 @@ public class UndirectedGraph {
         queue.add(start);
         while (queue.peek() != null) {
             int u = queue.remove();
-            for (int i = 0; i < adjacent.get(u).size(); ++i) {
-                int v = adjacent.get(u).get(i);
+            for (int i = 0; i < this.adjacent.get(u).size(); ++i) {
+                int v = this.adjacent.get(u).get(i);
                 if (Node.WHITE.equals(node[v].color)) {
                     node[v].color = Node.GRAY;
                     node[v].distance = node[u].distance + 1;
@@ -67,7 +66,7 @@ public class UndirectedGraph {
 
         //Find the longest shortest-distance for this starting point.
         int longest = 0;
-        for (int i = 0; i < numberOfNodes; ++i) {
+        for (int i = 0; i < this.numberOfNodes; ++i) {
             longest = Math.max(longest, node[i].distance);
         }
 
@@ -75,14 +74,33 @@ public class UndirectedGraph {
     }
 
     /**
+     * Calculate the diameter using BFS
      *
      * @return diameter
      */
     public int getDiameter() {
         //Find the longest shortest-distance of every start point. The max is the diameter.
-        for (int i = 0; i < numberOfNodes; ++i) {
-            diameter = Math.max(diameter, searchBreadthFirst(i, numberOfNodes, adjacent));
+        for (int i = 0; i < this.numberOfNodes; ++i) {
+            this.diameter = Math.max(this.diameter, searchBreadthFirst(i));
         }
-        return diameter;
+        return this.diameter;
+    }
+
+    /**
+     * Getter
+     *
+     * @return adjacent
+     */
+    public HashMap<Integer, LinkedList<Integer>> getAdjacent() {
+        return this.adjacent;
+    }
+
+    /**
+     * Getter
+     *
+     * @return
+     */
+    public int getNumberOfNodes() {
+        return this.numberOfNodes;
     }
 }
