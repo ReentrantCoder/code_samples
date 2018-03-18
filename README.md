@@ -7,7 +7,7 @@ A collection of short code samples not covered in my other repos for job intervi
 
 [hmmPos_Python](https://github.com/ReentrantCoder/school_code_samples/tree/master/hmmPos_Python) is my Hidden Markov model part-of-speech tagger for my natural lanugage processing course.
 
-[BFSdiameter_Java](https://github.com/ReentrantCoder/school_code_samples/tree/master/BFSdiameter_Java) is a Java implementation to find the diameter of a graph using BFS.
+[BFSdiameter_Java](https://github.com/ReentrantCoder/school_code_samples/tree/master/BFSdiameter_Java) is a Java implementation to find the diameter of a graph using BFS with JUnit testing.
 
 [kriging_R_Bash](https://github.com/ReentrantCoder/school_code_samples/tree/master/kriging_R_Bash) is a gaussian process regression of Wifi signal for my Computer Performance class.
 
